@@ -1,0 +1,90 @@
+:root {
+  --mainColor: #24353f;
+  --HeadingColor: #17a2b8;
+  --defualt-color: #495057;
+}
+
+body {
+  background-color: var(--mainColor);
+  font-family: "Titillium Web", sans-serif;
+}
+
+.container {
+  padding: 0 15px 0;
+}
+
+.group {
+  background-color: var(--mainColor);
+  box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+}
+.group h1 {
+  font-size: 40px;
+  color: var(--HeadingColor);
+}
+
+.form-control {
+  --bs-body-bg: var(--mainColor);
+  --bs-body-color: var(--defualt-color);
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #80bdff;
+}
+input {
+  color: white !important;
+}
+.btn {
+  background-color: var(--mainColor);
+  color: var(--HeadingColor);
+  border-color: var(--HeadingColor) !important;
+}
+.btn:hover {
+  background-color: var(--HeadingColor);
+  color: white;
+}
+.btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+}
+
+.group p a:hover {
+  text-decoration: underline !important;
+}
+
+.home .container {
+  height: 80vh;
+}
+.navbar {
+  box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+}
+
+.navbar-toggler {
+  --bs-navbar-toggler-border-color: rgb(255, 255, 255, 0.5);
+}
+.button {
+  background-color: var(--mainColor);
+  color: rgb(255, 255, 255, 0.5);
+  border-color: #ffca2c !important;
+}
+.button:hover {
+  background-color: #ffca2c;
+  color: rgb(255 255 255 / 75%);
+}
+.button:focus {
+    box-shadow: 0 0 0 0.2rem rgb(255 193 7 / 50%);
+    color: rgb(255 255 255 / 75%);
+  }
+.home .group {
+  width: 90%;
+}
+
+@media (min-width: 640px) {
+  .group {
+    width: 82% !important;
+  }
+}
+@media (min-width: 1280px) {
+  .group {
+    width: 67% !important;
+  }
+}

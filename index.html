@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body onload="Welcome()">
+    <header>
+    
+
+      <nav class="navbar navbar-expand-lg ps-lg-3 pe-lg-3">
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <a
+            class="navbar-brand text-uppercase text-decoration-none text-white ms-lg-5"
+            href="#"
+            >smart login</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end me-lg-5"
+            id="navbarSupportedContent"
+          >
+            <form class="d-flex" role="search">
+              <button
+                class="button border rounded p-2 w-100"
+                type="button"
+                onclick="logOut()"
+              >
+                Logout
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="home">
+        <div
+          class="container mt-5 d-flex justify-content-center align-items-center p-5"
+        >
+          <div class="group p-5 text-center" id="group"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
