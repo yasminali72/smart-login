@@ -46,7 +46,7 @@ function addUser() {
   }
 }
 function sigin() {
-  location.replace('signIn.html')
+  location.replace('index.html')
   
 }
 
@@ -102,7 +102,7 @@ function login() {
     displayRequried();
   } else if (user()) {
     localStorage.setItem("userName", userName);
-    location.replace("index.html");
+    location.replace("home.html");
   } else {
     displayIncorrect();
   }
@@ -113,5 +113,5 @@ function Welcome() {
 }
 
 function logOut() {
-  location.replace("signIn.html");
+  location.replace("index.html");
 }
