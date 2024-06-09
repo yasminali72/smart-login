@@ -69,7 +69,7 @@ function addUser() {
   
   
   
-  else if(validateName(signName.value)&&validateEmail(signEmail.value)) {
+  else  {
     user = {
       name: signName.value,
       email: signEmail.value,
