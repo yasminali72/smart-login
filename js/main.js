@@ -10,7 +10,7 @@ let signPassword = document.querySelector("#userPassword");
 let signupBtn = document.querySelector("#signup");
 
 //validation
-const namePattern = /^[a-zA-Z]+([ '-][a-zA-Z]+)*$/;
+const namePattern = /^[a-zA-Z]{2,50}([ '-][a-zA-Z]{2,50})*$/;
 function validateName(signName){
 return namePattern.test(signName)
 }
