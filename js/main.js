@@ -48,13 +48,9 @@ function addUser() {
     signPassword.value == ""
   ) {
     displayRequried();
-  } else if (userExist()) {
-    displayExist();
-    // clearData();
   } 
-  else if(!validateName(signName.value)&&!validateEmail(validateEmail.value)){
-    invalid()
-  }
+
+
   else if(!validateName(signName.value)){
     invalidName()
   }
@@ -64,6 +60,13 @@ function addUser() {
   else if(!validatepass(signPassword.value)){
     invalidPass()
   }
+ 
+
+  else if (userExist()) {
+    displayExist();
+    // clearData();
+  } 
+  
   
   
   else if(validateName(signName.value)&&validateEmail(signEmail.value)) {
@@ -130,11 +133,7 @@ function invalidName(){
     "message"
   ).innerHTML = `<p class='text-warning'>Invalid Name</p>`;
 }
-function invalid(){
-  document.getElementById(
-    "message"
-  ).innerHTML = `<p class='text-warning'>Invalid Name and Email</p>`;
-}
+
 function invalidPass(){
   document.getElementById(
     "message"
