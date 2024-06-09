@@ -22,17 +22,18 @@ body {
   color: var(--HeadingColor);
 }
 
-.form-control {
+.form-control-plaintext {
   --bs-body-bg: var(--mainColor);
   --bs-body-color: var(--defualt-color);
 }
 
-.form-control:focus {
+.form-control-plaintext:focus {
   box-shadow: none;
-  border-color: #80bdff;
+  border-color: #80bdff !important;
 }
 input {
   color: white !important;
+  padding: 6px 12px !important;
 }
 .btn {
   background-color: var(--mainColor);
