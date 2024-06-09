@@ -9,6 +9,26 @@ let signEmail = document.querySelector("#userEmail");
 let signPassword = document.querySelector("#userPassword");
 let signupBtn = document.querySelector("#signup");
 
+//validation
+const namePattern = /^[a-zA-Z]+([ '-][a-zA-Z]+)*$/;
+function validateName(signName){
+return namePattern.test(signName)
+}
+
+const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+function validateEmail(signEmail) {
+  return emailPattern.test(signEmail);
+}
+
+const passPattern =/^[\D\d._%+-@#$^&*!]{4,20}$/
+function validatepass(pass){
+return passPattern.test(pass)
+}
+
+
+
+
+
 let users;
 
 if (localStorage.getItem("userList") == null) {
@@ -31,7 +51,22 @@ function addUser() {
   } else if (userExist()) {
     displayExist();
     // clearData();
-  } else {
+  } 
+  else if(!validateName(signName.value)&&!validateEmail(validateEmail.value)){
+    invalid()
+  }
+  else if(!validateName(signName.value)){
+    invalidName()
+  }
+  else if (!validateEmail(signEmail.value)){
+    invalidEmail()
+  }
+  else if(!validatepass(signPassword.value)){
+    invalidPass()
+  }
+  
+  
+  else if(validateName(signName.value)&&validateEmail(signEmail.value)) {
     user = {
       name: signName.value,
       email: signEmail.value,
@@ -84,6 +119,28 @@ function displayIncorrect() {
     "message"
   ).innerHTML = `<p class='text-danger'>Incorrect email or password</p>`;
 }
+//validation
+function invalidEmail(){
+  document.getElementById(
+    "message"
+  ).innerHTML = `<p class='text-warning'>Invalid Email</p>`;
+}
+function invalidName(){
+  document.getElementById(
+    "message"
+  ).innerHTML = `<p class='text-warning'>Invalid Name</p>`;
+}
+function invalid(){
+  document.getElementById(
+    "message"
+  ).innerHTML = `<p class='text-warning'>Invalid Name and Email</p>`;
+}
+function invalidPass(){
+  document.getElementById(
+    "message"
+  ).innerHTML = `<p class='text-warning'>Invalid Password</p>`;
+
+}
 
 let userName;
 function user() {
@@ -115,3 +172,5 @@ function Welcome() {
 function logOut() {
   location.replace("index.html");
 }
+
+ 
